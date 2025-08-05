@@ -1,2 +1,4 @@
 # dotconfig
-My dot config files 
+
+Dot config files symlinked on my machine.
+
