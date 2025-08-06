@@ -9,8 +9,8 @@ locations on my machines.
 Each directory contains configuration files for a specific tool/application along
 with its own README explaining the setup:
 
-- `nvim/` - Neovim configuration and plugins
 - `ghostty/` - Ghostty terminal emulator settings
+- `nvim/` - Neovim configuration and plugins
 - `zsh/` - Zsh shell configuration (aliases, functions, etc.)
 
 ## Installation & Usage
@@ -19,7 +19,7 @@ with its own README explaining the setup:
 2. Review each tool's README for specific installation instructions
 3. Symlink the configurations to their appropriate system locations
 
-## Philosophy
+## About These Configs
 
 These dotfiles represent my personal preferences and workflow optimizations.
 They're shared:
