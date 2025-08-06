@@ -4,14 +4,8 @@ This repository contains my personal configuration files (dotfiles) for various
 tools and applications. These configurations are symlinked to their respective
 locations on my machines.
 
-## Contents
-
 Each directory contains configuration files for a specific tool/application along
-with its own README explaining the setup:
-
-- `ghostty/` - Ghostty terminal emulator settings
-- `nvim/` - Neovim configuration and plugins
-- `zsh/` - Zsh shell configuration (aliases, functions, etc.)
+with its own README explaining the setup.
 
 ## Installation & Usage
 
