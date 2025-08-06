@@ -1,4 +1,3 @@
 # dotconfig
 
-Dot config files symlinked on my machine.
-
+The `.config` files symlinked on my machine.
