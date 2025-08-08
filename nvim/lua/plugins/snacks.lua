@@ -1,10 +1,7 @@
+-- Make hidden files/directories appear the same as normal files in the picker
+vim.api.nvim_set_hl(0, "SnacksPickerPathHidden", { link = "Text" })
+
 return {
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "catppuccin",
-    },
-  },
   {
     "folke/snacks.nvim",
     opts = {
