@@ -6,7 +6,6 @@ return {
     "folke/snacks.nvim",
     opts = {
       picker = {
-        live = true,
         sources = {
           files = {
             hidden = true,
