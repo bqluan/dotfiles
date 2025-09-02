@@ -24,8 +24,10 @@ eval "$(zoxide init zsh)"
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Aliases
+alias ..="cd .."
 alias c="clear"
 alias dps="docker ps -a"
+alias l="ls -lh"
 alias lzd="lazydocker"
 alias lzg="lazygit"
 alias v="nvim"
