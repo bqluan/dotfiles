@@ -1,9 +1,12 @@
-// Use a simplified UI without special fonts (arrow glyphs).
-simplified_ui true
-
 // Use compact layout.
 // See: ./layouts/compact.kdl
 default_layout "compact"
+
+// Choose the mode that zellij uses when starting up.
+default_mode "locked"
+
+// Use a simplified UI without special fonts (arrow glyphs).
+simplified_ui true
 
 // Use the catppuccin mocha theme.
 // See: https://github.com/catppuccin/zellij
