@@ -1,0 +1,10 @@
+// Use a simplified UI without special fonts (arrow glyphs).
+simplified_ui true
+
+// Use compact layout.
+// See: ./layouts/compact.kdl
+default_layout "compact"
+
+// Use the catppuccin mocha theme.
+// See: https://github.com/catppuccin/zellij
+theme "catppuccin-mocha"
