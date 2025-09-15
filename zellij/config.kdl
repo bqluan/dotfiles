@@ -1,3 +1,47 @@
+keybinds clear-defaults=true {
+    normal {
+    }
+    locked {
+        bind "Ctrl ." { SwitchToMode "Normal"; }
+    }
+    pane {
+        bind "n" { NewPane; SwitchToMode "Normal"; }
+        bind "d" { NewPane "Down"; SwitchToMode "Normal"; }
+        bind "r" { NewPane "Right"; SwitchToMode "Normal"; }
+        bind "s" { NewPane "stacked"; SwitchToMode "Normal"; }
+        bind "f" { TogglePaneFrames; SwitchToMode "Normal"; }
+    }
+    session {
+        bind "d" { Detach; }
+        bind "a" {
+            LaunchOrFocusPlugin "session-manager" {
+                floating true
+                move_to_focused_tab true
+            };
+            SwitchToMode "Locked"
+        }
+    }
+    shared_except "locked" {
+        bind "Ctrl ." { SwitchToMode "Locked"; }
+        bind "Ctrl q" { Quit; }
+        bind "Ctrl h" "Ctrl Left" { MoveFocusOrTab "Left"; }
+        bind "Ctrl l" "Ctrl Right" { MoveFocusOrTab "Right"; }
+        bind "Ctrl j" "Ctrl Down" { MoveFocus "Down"; }
+        bind "Ctrl k" "Ctrl Up" { MoveFocus "Up"; }
+        bind "Ctrl =" "Ctrl +" { Resize "Increase"; }
+        bind "Ctrl -" { Resize "Decrease"; }
+    }
+    shared_except "normal" "locked" {
+        bind "Esc" { SwitchToMode "Normal"; }
+    }
+    shared_except "pane" "locked" {
+        bind "Ctrl p" { SwitchToMode "Pane"; }
+    }
+    shared_except "session" "locked" {
+        bind "Ctrl s" { SwitchToMode "Session"; }
+    }
+}
+
 // Use compact layout.
 // See: ./layouts/compact.kdl
 default_layout "compact"
