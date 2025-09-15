@@ -17,7 +17,7 @@ eval "$(starship init zsh)"
 
 # Zoxide
 # https://github.com/ajeetdsouza/zoxide
-eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh --no-cmd)"
 
 # Auto-suggestions
 # https://github.com/zsh-users/zsh-autosuggestions
@@ -27,9 +27,12 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias ..="cd .."
 alias c="clear"
 alias dps="docker ps -a"
+alias j="__zoxide_z"
+alias ji="__zoxide_zi"
 alias l="ls -Gh"
 alias ll="ls -Ghl"
 alias la="ls -Ghla"
 alias lzd="lazydocker"
 alias lzg="lazygit"
 alias v="nvim"
+alias z="zellij"
