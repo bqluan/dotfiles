@@ -5,6 +5,9 @@ default_layout "compact"
 // Choose the mode that zellij uses when starting up.
 default_mode "locked"
 
+// Hide pane frames around the panes.
+pane_frames false
+
 // Use a simplified UI without special fonts (arrow glyphs).
 simplified_ui true
 
