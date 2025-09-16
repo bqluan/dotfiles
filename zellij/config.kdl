@@ -1,6 +1,10 @@
 // Key bindings, override the default ones.
 keybinds clear-defaults=true {
     normal {
+        bind "s" { SwitchToMode "Session"; }
+        bind "t" { SwitchToMode "Tab"; }
+        bind "p" { SwitchToMode "Pane"; }
+        bind "Esc" { SwitchToMode "Locked"; }
     }
     locked {
         bind "Ctrl ." { SwitchToMode "Normal"; }
