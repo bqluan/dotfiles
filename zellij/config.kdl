@@ -7,7 +7,7 @@ keybinds clear-defaults=true {
         bind "Esc" { SwitchToMode "Locked"; }
     }
     locked {
-        bind "Ctrl ." { SwitchToMode "Normal"; }
+        bind "Super ;" { SwitchToMode "Normal"; }
     }
     session {
         bind "d" { Detach; }
@@ -53,14 +53,14 @@ keybinds clear-defaults=true {
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
     shared_except "locked" {
-        bind "Ctrl ." { SwitchToMode "Locked"; }
+        bind "Super ;" { SwitchToMode "Locked"; }
         bind "Ctrl q" { Quit; }
-        bind "Ctrl h" "Ctrl Left" { MoveFocusOrTab "Left"; }
-        bind "Ctrl l" "Ctrl Right" { MoveFocusOrTab "Right"; }
-        bind "Ctrl j" "Ctrl Down" { MoveFocus "Down"; }
-        bind "Ctrl k" "Ctrl Up" { MoveFocus "Up"; }
-        bind "Ctrl =" "Ctrl +" { Resize "Increase"; }
-        bind "Ctrl -" { Resize "Decrease"; }
+        bind "Ctrl h" "Super h" { MoveFocusOrTab "Left"; }
+        bind "Ctrl l" "Super l" { MoveFocusOrTab "Right"; }
+        bind "Ctrl j" "Super j" { MoveFocus "Down"; }
+        bind "Ctrl k" "Super k" { MoveFocus "Up"; }
+        bind "Ctrl =" "Super =" { Resize "Increase"; }
+        bind "Ctrl -" "Super -" { Resize "Decrease"; }
     }
     shared_except "normal" "locked" {
         bind "Esc" { SwitchToMode "Normal"; }
