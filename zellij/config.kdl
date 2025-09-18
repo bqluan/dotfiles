@@ -7,7 +7,7 @@ keybinds clear-defaults=true {
         bind "Esc" { SwitchToMode "Locked"; }
     }
     locked {
-        bind "Super ;" { SwitchToMode "Normal"; }
+        bind "Ctrl ;" { SwitchToMode "Normal"; }
     }
     session {
         bind "d" { Detach; }
@@ -53,26 +53,26 @@ keybinds clear-defaults=true {
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
     shared_except "locked" {
-        bind "Super ;" { SwitchToMode "Locked"; }
+        bind "Ctrl ;" { SwitchToMode "Locked"; }
         bind "Ctrl q" { Quit; }
-        bind "Ctrl h" "Super h" { MoveFocusOrTab "Left"; }
-        bind "Ctrl l" "Super l" { MoveFocusOrTab "Right"; }
-        bind "Ctrl j" "Super j" { MoveFocus "Down"; }
-        bind "Ctrl k" "Super k" { MoveFocus "Up"; }
-        bind "Ctrl =" "Super =" { Resize "Increase"; }
-        bind "Ctrl -" "Super -" { Resize "Decrease"; }
+        bind "Ctrl h" { MoveFocusOrTab "Left"; }
+        bind "Ctrl l" { MoveFocusOrTab "Right"; }
+        bind "Ctrl j" { MoveFocus "Down"; }
+        bind "Ctrl k" { MoveFocus "Up"; }
+        bind "Ctrl =" { Resize "Increase"; }
+        bind "Ctrl -" { Resize "Decrease"; }
     }
     shared_except "normal" "locked" {
         bind "Esc" { SwitchToMode "Normal"; }
     }
     shared_except "session" "locked" {
-        bind "Ctrl s" "Super s" { SwitchToMode "Session"; }
+        bind "Ctrl s" { SwitchToMode "Session"; }
     }
     shared_except "tab" "locked" {
-        bind "Ctrl t" "Super t" { SwitchToMode "Tab"; }
+        bind "Ctrl t" { SwitchToMode "Tab"; }
     }
     shared_except "pane" "locked" {
-        bind "Ctrl p" "Super p" { SwitchToMode "Pane"; }
+        bind "Ctrl p" { SwitchToMode "Pane"; }
     }
 }
 

@@ -1,17 +1,7 @@
 # Dotfiles symlinked on my machine
 
-This repository contains my personal configuration files (dotfiles) for various
-tools and applications. These configurations are symlinked to their respective
-locations on my machines.
-
 Each directory contains configuration files for a specific tool/application along
 with its own README explaining the setup.
-
-## Installation & Usage
-
-1. Clone this repository to your desired location
-2. Review each tool's README for specific installation instructions
-3. Symlink the configurations to their appropriate system locations
 
 ## About These Configs
 
