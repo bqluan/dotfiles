@@ -66,13 +66,13 @@ keybinds clear-defaults=true {
         bind "Esc" { SwitchToMode "Normal"; }
     }
     shared_except "session" "locked" {
-        bind "Ctrl s" { SwitchToMode "Session"; }
+        bind "Ctrl s" "Super s" { SwitchToMode "Session"; }
     }
     shared_except "tab" "locked" {
-        bind "Ctrl t" { SwitchToMode "Tab"; }
+        bind "Ctrl t" "Super t" { SwitchToMode "Tab"; }
     }
     shared_except "pane" "locked" {
-        bind "Ctrl p" { SwitchToMode "Pane"; }
+        bind "Ctrl p" "Super p" { SwitchToMode "Pane"; }
     }
 }
 
