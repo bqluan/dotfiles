@@ -1,5 +1,5 @@
 gui:
- # Use the mocha catppuccin theme
+ # Use the catppuccin mocha theme
  # https://github.com/catppuccin/lazygit
  theme:
    activeBorderColor:
