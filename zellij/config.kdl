@@ -40,9 +40,9 @@ keybinds clear-defaults=true {
     }
     pane {
         bind "n" { NewPane; SwitchToMode "Normal"; }
-        bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}
-        bind "j" { NewPane "Down"; SwitchToMode "Normal"; }
-        bind "l" { NewPane "Right"; SwitchToMode "Normal"; }
+        bind "c" { SwitchToMode "RenamePane"; PaneNameInput 0;}
+        bind "d" { NewPane "Down"; SwitchToMode "Normal"; }
+        bind "r" { NewPane "Right"; SwitchToMode "Normal"; }
         bind "s" { NewPane "stacked"; SwitchToMode "Normal"; }
         bind "f" { TogglePaneFrames; SwitchToMode "Normal"; }
         bind "w" { ToggleFloatingPanes; SwitchToMode "Normal"; }
