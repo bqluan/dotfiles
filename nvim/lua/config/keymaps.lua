@@ -2,6 +2,9 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+-- Copy
+vim.keymap.set("v", "<D-c>", '"+y', { noremap = true, silent = true, desc = "Copy" })
+
 -- Formatting
 vim.keymap.set({ "n", "i", "v" }, "<D-f>", function()
   LazyVim.format({ force = true })
