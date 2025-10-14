@@ -40,14 +40,14 @@ keybinds clear-defaults=true {
     }
     pane {
         bind "n" { NewPane; SwitchToMode "Locked"; }
-        bind "c" { SwitchToMode "RenamePane"; PaneNameInput 0;}
-        bind "d" { NewPane "Down"; SwitchToMode "Locked"; }
-        bind "r" { NewPane "Right"; SwitchToMode "Locked"; }
+        bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}
+        bind "j" { NewPane "Down"; SwitchToMode "Locked"; }
+        bind "l" { NewPane "Right"; SwitchToMode "Locked"; }
         bind "s" { NewPane "stacked"; SwitchToMode "Locked"; }
-        bind "k" "Up" { MoveFocus "Up"; }
-        bind "j" "Down" { MoveFocus "Down"; }
-        bind "h" "Left" { MoveFocus "Left"; }
-        bind "l" "Right" { MoveFocus "Right"; }
+        bind "Up" { MoveFocus "Up"; }
+        bind "Down" { MoveFocus "Down"; }
+        bind "Left" { MoveFocus "Left"; }
+        bind "Right" { MoveFocus "Right"; }
         bind "f" { TogglePaneFrames; SwitchToMode "Locked"; }
         bind "w" { ToggleFloatingPanes; SwitchToMode "Locked"; }
         bind "z" { ToggleFocusFullscreen; SwitchToMode "Locked"; }
