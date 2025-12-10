@@ -42,8 +42,8 @@ keybinds clear-defaults=true {
         bind "=" { Resize "Increase"; }
         bind "-" { Resize "Decrease"; }
         bind "f" { TogglePaneFrames; }
-        bind "w" { ToggleFloatingPanes; SwitchToMode "Locked"; }
         bind "z" { ToggleFocusFullscreen; }
+        bind "w" { ToggleFloatingPanes; SwitchToMode "Locked"; }
     }
     renamepane {
         bind "Enter" { SwitchToMode "Locked"; }
