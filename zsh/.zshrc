@@ -27,6 +27,7 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias ..="cd .."
 alias c="clear"
 alias dps="docker ps -a"
+alias ff="fastfetch"
 alias j="__zoxide_z"
 alias ji="__zoxide_zi"
 alias l="ls -Gh"
