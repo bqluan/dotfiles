@@ -74,8 +74,8 @@ keybinds clear-defaults=true {
 }
 
 // Use compact layout.
-// See: ./layouts/compact.kdl
-default_layout "compact"
+// See: ./layouts/zjstatus.kdl
+default_layout "zjstatus"
 
 // Choose the mode that zellij uses when starting up.
 default_mode "locked"

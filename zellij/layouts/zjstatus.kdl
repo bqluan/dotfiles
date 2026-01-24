@@ -1,0 +1,50 @@
+layout {
+    pane size=1 borderless=true {
+        plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
+            // Catppuccin Mocha color theme
+            // See https://catppuccin.com/palette
+            color_base     "#1e1e2e"
+            color_black    "#000000"
+            color_blue     "#89b4fa"
+            color_green    "#a6e3a1"
+            color_white    "#ffffff"
+            color_lavender "#b4befe"
+            color_surface0 "#313244"
+            color_peach    "#fab387"
+            color_red      "#f38ba8"
+            color_overlay0 "#6c7086"
+
+            format_left   "#[fg=$black,bg=$blue,bold] Z {session} {mode}{tabs}"
+            format_center ""
+            format_right  "#[fg=$base,bg=$lavender]{datetime}"
+            format_space  "#[bg=$base]"
+
+            mode_locked       "#[fg=$black,bg=$blue]󰌾 #[fg=$blue,bg=$base]"
+            mode_normal       "#[fg=$blue,bg=$surface0] #[fg=$green,bg=$surface0,bold]{name} #[fg=$surface0,bg=$base]"
+            mode_session      "#[fg=$blue,bg=$surface0] #[fg=$red,bg=$surface0,bold]{name} #[fg=$surface0,bg=$base]"
+            mode_tab          "#[fg=$blue,bg=$surface0] #[fg=$white,bg=$surface0,bold]{name} #[fg=$surface0,bg=$base]"
+            mode_rename_tab   "#[fg=$blue,bg=$surface0] #[fg=$white,bg=$surface0,bold]{name} 󰏫 #[fg=$surface0,bg=$base]"
+            mode_pane         "#[fg=$blue,bg=$surface0] #[fg=$peach,bg=$surface0,bold]{name} #[fg=$surface0,bg=$base]"
+            mode_rename_pane  "#[fg=$blue,bg=$surface0] #[fg=$peach,bg=$surface0,bold]{name} 󰏫 #[fg=$surface0,bg=$base]"
+            mode_resize       "#[fg=$blue,bg=$surface0] #[fg=$green,bg=$surface0,bold]{name} #[fg=$surface0,bg=$base]"
+            mode_scroll       "#[fg=$blue,bg=$surface0] #[fg=$green,bg=$surface0,bold]{name} #[fg=$surface0,bg=$base]"
+            mode_search       "#[fg=$blue,bg=$surface0] #[fg=$green,bg=$surface0,bold]{name} #[fg=$surface0,bg=$base]"
+            mode_enter_search "#[fg=$blue,bg=$surface0] #[fg=$green,bg=$surface0,bold]{name}  #[fg=$surface0,bg=$base]"
+            mode_move         "#[fg=$blue,bg=$surface0] #[fg=$green,bg=$surface0,bold]{name} #[fg=$surface0,bg=$base]"
+            mode_prompt       "#[fg=$blue,bg=$surface0] #[fg=$green,bg=$surface0,bold]{name} #[fg=$surface0,bg=$base]"
+            mode_tmux         "#[fg=$blue,bg=$surface0] #[fg=$green,bg=$surface0,bold]{name} #[fg=$surface0,bg=$base]"
+
+            tab_normal            "#[fg=$base,bg=$overlay0] {index}  {name} #[fg=$overlay0,bg=$base]"
+            tab_normal_fullscreen "#[fg=$base,bg=$overlay0] {index}  {name}  #[fg=$overlay0,bg=$base]"
+            tab_normal_sync       "#[fg=$base,bg=$overlay0] {index}  {name}  #[fg=$overlay0,bg=$base]"
+            tab_active            "#[fg=$base,bg=$white,bold] {index}  {name} #[fg=$white,bg=$base]"
+            tab_active_fullscreen "#[fg=$base,bg=$white,bold] {index}  {name}  #[fg=$white,bg=$base]"
+            tab_active_sync       "#[fg=$base,bg=$white,bold] {index}  {name}  #[fg=$white,bg=$base]"
+
+            datetime          "#[fg=$black,bg=$lavender,bold] {format} "
+            datetime_format   "%a %b %d %H:%M"
+            datetime_timezone "Asia/Shanghai"
+        }
+    }
+    pane
+}
