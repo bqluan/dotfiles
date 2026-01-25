@@ -1,12 +1,35 @@
-// Key bindings, override the default ones.
+// Key bindings.
 keybinds clear-defaults=true {
     locked {
-        bind "Ctrl ;" { SwitchToMode "Normal"; }
+        bind "Super Shift l" { SwitchToMode "Normal"; }
+        bind "Super t" { NewTab; }
+        bind "Super p" { NewPane; }
+        bind "Super d" { NewPane "Down"; }
+        bind "Super 1" { GoToTab 1; }
+        bind "Super 2" { GoToTab 2; }
+        bind "Super 3" { GoToTab 3; }
+        bind "Super 4" { GoToTab 4; }
+        bind "Super 5" { GoToTab 5; }
+        bind "Super 6" { GoToTab 6; }
+        bind "Super 7" { GoToTab 7; }
+        bind "Super 8" { GoToTab 8; }
+        bind "Super 9" { GoToTab 9; }
+        bind "Super h" { MoveFocus "Left"; }
+        bind "Super j" { MoveFocus "Down"; }
+        bind "Super k" { MoveFocus "Up"; }
+        bind "Super l" { MoveFocus "Right"; }
+        bind "Super Alt h" { MovePane "Left"; }
+        bind "Super Alt j" { MovePane "Down"; }
+        bind "Super Alt k" { MovePane "Up"; }
+        bind "Super Alt l" { MovePane "Right"; }
+        bind "Super f" { ToggleFocusFullscreen; }
+        bind "Super w" { CloseFocus; }
     }
     normal {
         bind "s" { SwitchToMode "Session"; }
         bind "t" { SwitchToMode "Tab"; }
         bind "p" { SwitchToMode "Pane"; }
+        bind "z" { SwitchToMode "Resize"; }
         bind "Esc" { SwitchToMode "Locked"; }
     }
     session {
@@ -16,64 +39,76 @@ keybinds clear-defaults=true {
                 floating true
                 move_to_focused_tab true
             };
-            SwitchToMode "Locked"
+            SwitchToMode "Locked";
         }
+        bind "p" {
+            LaunchOrFocusPlugin "plugin-manager" {
+                floating true
+                move_to_focused_tab true
+            };
+            SwitchToMode "Locked";
+        }
+        bind "s" {
+            LaunchOrFocusPlugin "zellij:share" {
+                floating true
+                move_to_focused_tab true
+            };
+            SwitchToMode "Locked";
+        }
+        bind "Esc" { SwitchToMode "Locked"; }
     }
     tab {
-        bind "n" { NewTab; SwitchToMode "Locked"; }
-        bind "c" { SwitchToMode "RenameTab"; TabNameInput 0; }
+        bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "h" "Left" "Up" "k" { GoToPreviousTab; }
         bind "l" "Right" "Down" "j" { GoToNextTab; }
+        bind "n" { NewTab; SwitchToMode "Locked"; }
+        bind "x" { CloseTab; SwitchToMode "Locked"; }
+        bind "s" { ToggleActiveSyncTab; SwitchToMode "Locked"; }
+        bind "1" { GoToTab 1; }
+        bind "2" { GoToTab 2; }
+        bind "3" { GoToTab 3; }
+        bind "4" { GoToTab 4; }
+        bind "5" { GoToTab 5; }
+        bind "6" { GoToTab 6; }
+        bind "7" { GoToTab 7; }
+        bind "8" { GoToTab 8; }
+        bind "9" { GoToTab 9; }
+        bind "Esc" { SwitchToMode "Locked"; }
     }
     renametab {
         bind "Enter" { SwitchToMode "Locked"; }
         bind "Esc" { UndoRenameTab; SwitchToMode "Tab"; }
     }
     pane {
+        bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}
         bind "n" { NewPane; SwitchToMode "Locked"; }
-        bind "c" { SwitchToMode "RenamePane"; PaneNameInput 0;}
         bind "d" { NewPane "Down"; SwitchToMode "Locked"; }
-        bind "r" { NewPane "Right"; SwitchToMode "Locked"; }
         bind "s" { NewPane "stacked"; SwitchToMode "Locked"; }
-        bind "k" "Up" { MoveFocus "Up"; }
-        bind "j" "Down" { MoveFocus "Down"; }
-        bind "h" "Left" { MoveFocus "Left"; }
-        bind "l" "Right" { MoveFocus "Right"; }
-        bind "=" { Resize "Increase"; }
-        bind "-" { Resize "Decrease"; }
-        bind "f" { TogglePaneFrames; }
-        bind "z" { ToggleFocusFullscreen; }
         bind "w" { ToggleFloatingPanes; SwitchToMode "Locked"; }
+        bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "Locked"; }
+        bind "i" { TogglePanePinned; SwitchToMode "Locked"; }
+        bind "f" { TogglePaneFrames; }
+        bind "Esc" { SwitchToMode "Locked"; }
     }
     renamepane {
         bind "Enter" { SwitchToMode "Locked"; }
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
+    resize {
+        bind "h" "Left" { Resize "Increase Left"; }
+        bind "j" "Down" { Resize "Increase Down"; }
+        bind "k" "Up" { Resize "Increase Up"; }
+        bind "l" "Right" { Resize "Increase Right"; }
+        bind "=" "+" { Resize "Increase"; }
+        bind "-" { Resize "Decrease"; }
+        bind "Esc" { SwitchToMode "Locked"; }
+    }
     shared_except "locked" {
-        bind "Ctrl ;" { SwitchToMode "Locked"; }
-        bind "Ctrl q" { Quit; }
-        bind "Ctrl h" { MoveFocusOrTab "Left"; SwitchToMode "Locked"; }
-        bind "Ctrl l" { MoveFocusOrTab "Right"; SwitchToMode "Locked"; }
-        bind "Ctrl j" { MoveFocus "Down"; SwitchToMode "Locked"; }
-        bind "Ctrl k" { MoveFocus "Up"; SwitchToMode "Locked"; }
-        bind "Ctrl =" { Resize "Increase"; }
-        bind "Ctrl -" { Resize "Decrease"; }
-    }
-    shared_except "normal" "locked" {
-        bind "Esc" { SwitchToMode "Normal"; }
-    }
-    shared_except "session" "locked" {
-        bind "Ctrl s" { SwitchToMode "Session"; }
-    }
-    shared_except "tab" "locked" {
-        bind "Ctrl t" { SwitchToMode "Tab"; }
-    }
-    shared_except "pane" "locked" {
-        bind "Ctrl p" { SwitchToMode "Pane"; }
+        bind "Super Shift l" { SwitchToMode "Locked"; }
     }
 }
 
-// Use compact layout.
+// Use zjstatus layout.
 // See: ./layouts/zjstatus.kdl
 default_layout "zjstatus"
 

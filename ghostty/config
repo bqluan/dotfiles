@@ -3,3 +3,16 @@ font-size = 13.5
 macos-option-as-alt = true
 mouse-hide-while-typing = true
 theme = catppuccin-mocha.conf
+
+keybind = clear
+keybind = super+,=open_config
+keybind = super+shift+,=reload_config
+keybind = super+c=copy_to_clipboard
+keybind = super+v=paste_from_clipboard
+keybind = super+equal=increase_font_size:1
+keybind = super++=increase_font_size:1
+keybind = super+-=decrease_font_size:1
+keybind = super+0=reset_font_size
+keybind = super+shift+p=toggle_command_palette
+keybind = super+enter=toggle_fullscreen
+keybind = super+q=quit
