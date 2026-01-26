@@ -1,7 +1,7 @@
 // Key bindings, override the default ones.
 keybinds clear-defaults=true {
     locked {
-        bind "Super Alt l" { SwitchToMode "Normal"; }
+        bind "Super Shift l" { SwitchToMode "Normal"; }
         bind "Super t" { NewTab; }
         bind "Super p" { NewPane; }
         bind "Super d" { NewPane "Down"; }
@@ -18,11 +18,11 @@ keybinds clear-defaults=true {
         bind "Super j" { MoveFocus "Down"; }
         bind "Super k" { MoveFocus "Up"; }
         bind "Super l" { MoveFocus "Right"; }
-        bind "Super Shift h" { MovePane "Left"; }
-        bind "Super Shift j" { MovePane "Down"; }
-        bind "Super Shift k" { MovePane "Up"; }
-        bind "Super Shift l" { MovePane "Right"; }
-        bind "Super Shift f" { ToggleFocusFullscreen; }
+        bind "Super Alt h" { MovePane "Left"; }
+        bind "Super Alt j" { MovePane "Down"; }
+        bind "Super Alt k" { MovePane "Up"; }
+        bind "Super Alt l" { MovePane "Right"; }
+        bind "Super Enter" { ToggleFocusFullscreen; }
         bind "Super w" { CloseFocus; }
     }
     normal {
@@ -108,7 +108,7 @@ keybinds clear-defaults=true {
         bind "Esc" { SwitchToMode "Locked"; }
     }
     shared_except "locked" {
-        bind "Super Alt l" { SwitchToMode "Locked"; }
+        bind "Super Shift l" { SwitchToMode "Locked"; }
     }
 }
 

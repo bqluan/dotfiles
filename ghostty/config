@@ -14,5 +14,4 @@ keybind = super++=increase_font_size:1
 keybind = super+-=decrease_font_size:1
 keybind = super+0=reset_font_size
 keybind = super+shift+p=toggle_command_palette
-keybind = super+enter=toggle_fullscreen
 keybind = super+q=quit
