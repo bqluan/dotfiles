@@ -1,4 +1,4 @@
-// Key bindings.
+// Key bindings, override the default ones.
 keybinds clear-defaults=true {
     locked {
         bind "Super Shift l" { SwitchToMode "Normal"; }
@@ -22,7 +22,7 @@ keybinds clear-defaults=true {
         bind "Super Alt j" { MovePane "Down"; }
         bind "Super Alt k" { MovePane "Up"; }
         bind "Super Alt l" { MovePane "Right"; }
-        bind "Super f" { ToggleFocusFullscreen; }
+        bind "Super Shift f" { ToggleFocusFullscreen; }
         bind "Super w" { CloseFocus; }
     }
     normal {
