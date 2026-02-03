@@ -41,6 +41,9 @@ return {
       },
       { "<leader>e", "<leader>fe", desc = "Explorer Snacks (cwd)", remap = true },
       { "<leader>E", "<leader>fE", desc = "Explorer Snacks (root dir)", remap = true },
+      { "<leader><space>", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },
+      { "<leader>ff", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },
+      { "<leader>fF", LazyVim.pick("files"), desc = "Find Files (root dir)" },
     },
   },
 }
