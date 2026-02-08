@@ -25,11 +25,16 @@ return {
                 position = "left",
                 border = "none",
                 box = "vertical",
-                { win = "input", height = 1, border = true },
+                { win = "input", title = "{live} {flags}", height = 1, border = true },
                 { win = "list", border = "none" },
                 { win = "preview", title = "{preview}", height = 0.4, border = "top" },
               },
             },
+          },
+        },
+        toggles = {
+          hidden = {
+            enabled = false,
           },
         },
       },
