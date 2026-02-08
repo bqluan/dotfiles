@@ -15,11 +15,21 @@ return {
           },
           explorer = {
             hidden = true,
-          },
-        },
-        toggles = {
-          hidden = {
-            enabled = false,
+            layout = {
+              preview = false,
+              layout = {
+                backdrop = false,
+                width = 40,
+                min_width = 40,
+                height = 0,
+                position = "left",
+                border = "none",
+                box = "vertical",
+                { win = "input", height = 1, border = true },
+                { win = "list", border = "none" },
+                { win = "preview", title = "{preview}", height = 0.4, border = "top" },
+              },
+            },
           },
         },
       },
