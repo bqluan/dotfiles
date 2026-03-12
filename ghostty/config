@@ -14,4 +14,5 @@ keybind = super++=increase_font_size:1
 keybind = super+-=decrease_font_size:1
 keybind = super+0=reset_font_size
 keybind = super+shift+p=toggle_command_palette
+keybind = super+shift+t=new_tab
 keybind = super+q=quit
