@@ -5,6 +5,7 @@ keybinds clear-defaults=true {
         bind "Super t" { NewTab; }
         bind "Super p" { NewPane; }
         bind "Super d" { NewPane "Down"; }
+        bind "Super w" { ToggleFloatingPanes; }
         bind "Super 1" { GoToTab 1; }
         bind "Super 2" { GoToTab 2; }
         bind "Super 3" { GoToTab 3; }
@@ -23,7 +24,6 @@ keybinds clear-defaults=true {
         bind "Super Alt k" { MovePane "Up"; }
         bind "Super Alt l" { MovePane "Right"; }
         bind "Super Enter" { ToggleFocusFullscreen; }
-        bind "Super w" { CloseFocus; }
     }
     normal {
         bind "s" { SwitchToMode "Session"; }
