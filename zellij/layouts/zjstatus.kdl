@@ -1,6 +1,6 @@
 layout {
     pane size=1 borderless=true {
-        plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
+        plugin location="file:~/.config/zellij/plugins/zjstatus-v0.22.0.wasm" {
             // Catppuccin Mocha color theme
             // See https://catppuccin.com/palette
             color_base     "#1e1e2e"
