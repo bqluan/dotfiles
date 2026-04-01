@@ -11,5 +11,9 @@ vim.opt.tabstop = 2
 -- global statusline (one bar at the bottom, not per-window)
 vim.opt.laststatus = 3
 
+-- ignore case in search (smartcase: ignore case unless pattern has uppercase)
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
 -- hide persistent command line, only show when needed
 vim.opt.cmdheight = 0

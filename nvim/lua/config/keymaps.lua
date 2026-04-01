@@ -39,6 +39,15 @@ vim.keymap.set("n", "<leader>fg", "<cmd>FzfLua live_grep<cr>")
 vim.keymap.set("n", "<leader>fb", "<cmd>FzfLua buffers<cr>")
 vim.keymap.set("n", "<leader>fr", "<cmd>FzfLua oldfiles<cr>")
 
+-- flash jump
+vim.keymap.set({ "n", "x", "o" }, "s", function()
+	require("flash").jump()
+end, { desc = "Flash" })
+
+vim.keymap.set({ "n", "x", "o" }, "S", function()
+	require("flash").treesitter()
+end, { desc = "Flash Treesitter" })
+
 -- window navigation
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
