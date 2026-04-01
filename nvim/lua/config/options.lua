@@ -17,3 +17,7 @@ vim.opt.smartcase = true
 
 -- hide persistent command line, only show when needed
 vim.opt.cmdheight = 0
+
+-- show line numbers with relative positioning
+vim.opt.number = true
+vim.opt.relativenumber = true
