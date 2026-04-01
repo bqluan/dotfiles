@@ -1,5 +1,15 @@
--- Options are automatically loaded before lazy.nvim startup
--- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+-- disable netrw (required before loading nvim-tree)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
--- LazyVim auto format
-vim.g.autoformat = false
+-- leader key
+vim.g.mapleader = " "
+
+-- tab display width
+vim.opt.tabstop = 2
+
+-- global statusline (one bar at the bottom, not per-window)
+vim.opt.laststatus = 3
+
+-- hide persistent command line, only show when needed
+vim.opt.cmdheight = 0

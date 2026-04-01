@@ -1,26 +1,46 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+-- quit all (warns on unsaved buffers)
+vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>")
 
--- Formatting
-vim.keymap.set({ "n", "i", "v" }, "<D-f>", function()
-  LazyVim.format({ force = true })
-end, { desc = "Format" })
+-- save
+vim.keymap.set({ "n", "i" }, "<D-s>", "<cmd>write<cr>")
 
--- Save file
-vim.keymap.set({ "n", "i", "v" }, "<D-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
+-- toggle file explorer
+vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>")
 
--- lazygit
-if vim.fn.executable("lazygit") == 1 then
-  vim.keymap.set({ "n", "i", "v" }, "<D-g>", function()
-    Snacks.lazygit()
-  end, { desc = "Lazygit (cwd)" })
+-- buffer navigation
+vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>")
+vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>")
+vim.keymap.set("n", "<leader>bd", "<cmd>bdelete<cr>")
+vim.keymap.set("n", "<leader>bo", "<cmd>BufferLineCloseOthers<cr>")
 
-  vim.keymap.set("n", "<leader>gg", function()
-    Snacks.lazygit()
-  end, { desc = "Lazygit (cwd)" })
+-- git
+vim.keymap.set("n", "<leader>gg", function()
+	require("plugins.lazygit").open()
+end)
 
-  vim.keymap.set("n", "<leader>gG", function()
-    Snacks.lazygit({ cwd = LazyVim.root.git() })
-  end, { desc = "Lazygit (Root Dir)" })
-end
+-- lsp
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function(args)
+		local opts = { buffer = args.buf }
+		vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+		vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+		vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+		vim.keymap.set("n", "<leader>f", function()
+			vim.lsp.buf.format({ async = true })
+		end, opts)
+	end,
+})
+
+-- fzf
+vim.keymap.set("n", "<leader>ff", "<cmd>FzfLua files<cr>")
+vim.keymap.set("n", "<leader>fg", "<cmd>FzfLua live_grep<cr>")
+vim.keymap.set("n", "<leader>fb", "<cmd>FzfLua buffers<cr>")
+vim.keymap.set("n", "<leader>fr", "<cmd>FzfLua oldfiles<cr>")
+
+-- window navigation
+vim.keymap.set("n", "<C-h>", "<C-w>h")
+vim.keymap.set("n", "<C-j>", "<C-w>j")
+vim.keymap.set("n", "<C-k>", "<C-w>k")
+vim.keymap.set("n", "<C-l>", "<C-w>l")
