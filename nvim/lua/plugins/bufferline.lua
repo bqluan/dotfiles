@@ -11,11 +11,11 @@ require("bufferline").setup({
 				text = function()
 					local ok, explorer = pcall(require("nvim-tree.core").get_explorer)
 					if not ok or not explorer then
-						return "󰙅 Explorer"
+						return "Explorer"
 					end
 
 					local filters = explorer.filters.state
-					local indicators = { "󰙅 Explorer" }
+					local indicators = { "Explorer " }
 
 					-- filter off = files are visible, show indicator
 					if not filters.dotfiles then
