@@ -4,6 +4,9 @@ vim.pack.add({
 })
 
 require("nvim-tree").setup({
+	view = {
+		width = 35,
+	},
 	renderer = {
 		root_folder_label = function(path)
 			return "󰙅 " .. vim.fn.fnamemodify(path, ":t")
