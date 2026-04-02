@@ -1,7 +1,7 @@
 // Key bindings, override the default ones.
 keybinds clear-defaults=true {
     locked {
-        bind "Super Shift l" { SwitchToMode "Normal"; }
+        bind "Super ;" { SwitchToMode "Normal"; }
         bind "Super t" { NewTab; }
         bind "Super p" { NewPane; }
         bind "Super d" { NewPane "Down"; }
@@ -108,7 +108,7 @@ keybinds clear-defaults=true {
         bind "Esc" { SwitchToMode "Locked"; }
     }
     shared_except "locked" {
-        bind "Super Shift l" { SwitchToMode "Locked"; }
+        bind "Super ;" { SwitchToMode "Locked"; }
     }
 }
 
