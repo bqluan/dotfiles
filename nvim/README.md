@@ -7,9 +7,13 @@ A minimal Neovim configuration built on **Neovim >= 0.12** using the built-in `v
 - Neovim >= 0.12
 - [fzf](https://github.com/junegunn/fzf) (for fzf-lua)
 - [lazygit](https://github.com/jesseduffield/lazygit) (for git integration)
-- Language servers as needed:
-  - `lua-language-server` (Lua)
-  - `gopls` (Go)
+- Language servers (manually installed, as needed):
+  - [gopls](https://go.dev/gopls) — Go
+  - [lua-language-server](https://github.com/LuaLS/lua-language-server) — Lua
+  - [rust-analyzer](https://github.com/rust-lang/rust-analyzer) — Rust
+  - [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) — JavaScript / TypeScript
+- Formatters (manually installed, as needed):
+  - [stylua](https://github.com/JohnnyMorganz/StyLua) — Lua
 
 ## Keymaps
 
