@@ -5,6 +5,7 @@ vim.pack.add({
 require("conform").setup({
 	formatters_by_ft = {
 		go = { "gofmt" },
+		html = { "prettier" },
 		lua = { "stylua" },
 		javascript = { "prettier" },
 		javascriptreact = { "prettier" },
