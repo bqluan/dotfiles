@@ -14,6 +14,7 @@ A minimal Neovim configuration built on **Neovim >= 0.12** using the built-in `v
   - [svelte-language-server](https://github.com/sveltejs/language-tools) — Svelte
   - [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) — JavaScript / TypeScript
 - Formatters (manually installed, as needed):
+  - [prettier](https://github.com/prettier/prettier) — JavaScript, TypeScript, etc.
   - [stylua](https://github.com/JohnnyMorganz/StyLua) — Lua
 
 ## Keymaps

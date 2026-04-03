@@ -41,11 +41,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			vim.lsp.buf.code_action,
 			vim.tbl_extend("force", opts, { desc = "Code action" })
 		)
-		vim.keymap.set("n", "<leader>cf", function()
-			require("conform").format({ bufnr = args.buf })
-		end, vim.tbl_extend("force", opts, { desc = "Format" }))
 	end,
 })
+
+-- format (conform)
+vim.keymap.set("n", "<leader>cf", function()
+	require("conform").format({ bufnr = 0 })
+end, { desc = "Format" })
 
 -- find
 vim.keymap.set("n", "<leader>ff", "<cmd>FzfLua files<cr>", { desc = "Find files" })

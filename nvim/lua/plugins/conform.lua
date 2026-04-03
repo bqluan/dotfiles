@@ -8,8 +8,10 @@ require("conform").setup({
 		lua = { "stylua" },
 		javascript = { "prettier" },
 		javascriptreact = { "prettier" },
+		json = { "prettier" },
 		svelte = { "prettier" },
 		typescript = { "prettier" },
 		typescriptreact = { "prettier" },
+		yaml = { "prettier" },
 	},
 })
