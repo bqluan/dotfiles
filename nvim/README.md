@@ -11,6 +11,7 @@ A minimal Neovim configuration built on **Neovim >= 0.12** using the built-in `v
   - [gopls](https://go.dev/gopls) — Go
   - [lua-language-server](https://github.com/LuaLS/lua-language-server) — Lua
   - [rust-analyzer](https://github.com/rust-lang/rust-analyzer) — Rust
+  - [svelte-language-server](https://github.com/sveltejs/language-tools) — Svelte
   - [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) — JavaScript / TypeScript
 - Formatters (manually installed, as needed):
   - [stylua](https://github.com/JohnnyMorganz/StyLua) — Lua

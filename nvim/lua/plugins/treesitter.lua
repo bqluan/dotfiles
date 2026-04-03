@@ -3,7 +3,7 @@ vim.pack.add({
 })
 
 -- add languages here for treesitter parser install + highlight
-local supportedLanguages = { "go", "gomod", "gosum" }
+local supportedLanguages = { "go", "gomod", "gosum", "svelte" }
 
 -- install parsers (async, no-op if already installed)
 require("nvim-treesitter").install(supportedLanguages)
