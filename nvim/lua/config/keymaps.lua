@@ -14,7 +14,7 @@ vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
 -- clipboard
 vim.keymap.set("v", "<leader>y", '"+y', { desc = "Copy" })
 vim.keymap.set("n", "<leader>Y", '"+y$', { desc = "Copy to end of line" })
-vim.keymap.set("n", "Y", 'y$', { desc = "Yank to end of line" })
+vim.keymap.set("n", "Y", "y$", { desc = "Yank to end of line" })
 
 -- buffer
 vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
@@ -31,14 +31,18 @@ end, { desc = "Lazygit" })
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)
 		local opts = { buffer = args.buf }
-		vim.keymap.set("n", "gd", vim.lsp.buf.definition,
-			vim.tbl_extend("force", opts, { desc = "Goto definition" }))
+		vim.keymap.set("n", "gd", vim.lsp.buf.definition, vim.tbl_extend("force", opts, { desc = "Goto definition" }))
 		vim.keymap.set("n", "gr", vim.lsp.buf.references, vim.tbl_extend("force", opts, { desc = "References" }))
 		vim.keymap.set("n", "K", vim.lsp.buf.hover, vim.tbl_extend("force", opts, { desc = "Hover" }))
 		vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, vim.tbl_extend("force", opts, { desc = "Rename" }))
-		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, vim.tbl_extend("force", opts, { desc = "Code action" }))
+		vim.keymap.set(
+			"n",
+			"<leader>ca",
+			vim.lsp.buf.code_action,
+			vim.tbl_extend("force", opts, { desc = "Code action" })
+		)
 		vim.keymap.set("n", "<leader>cf", function()
-			vim.lsp.buf.format()
+			require("conform").format({ bufnr = args.buf })
 		end, vim.tbl_extend("force", opts, { desc = "Format" }))
 	end,
 })

@@ -13,4 +13,3 @@ require("fzf-lua").setup({
 		},
 	},
 })
-
