@@ -6,10 +6,11 @@ require("conform").setup({
 	formatters_by_ft = {
 		go = { "gofmt" },
 		html = { "prettier" },
-		lua = { "stylua" },
 		javascript = { "prettier" },
 		javascriptreact = { "prettier" },
 		json = { "prettier" },
+		lua = { "stylua" },
+		markdown = { "prettier" },
 		svelte = { "prettier" },
 		typescript = { "prettier" },
 		typescriptreact = { "prettier" },
