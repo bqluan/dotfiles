@@ -21,3 +21,6 @@ vim.opt.cmdheight = 0
 -- show line numbers with relative positioning
 vim.opt.number = true
 vim.opt.relativenumber = true
+
+-- use system clipboard
+vim.opt.clipboard = "unnamedplus"

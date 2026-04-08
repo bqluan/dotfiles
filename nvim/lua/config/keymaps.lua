@@ -12,9 +12,7 @@ vim.keymap.set({ "n", "i" }, "<D-s>", "<cmd>write<cr>", { desc = "Save file" })
 vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
 
 -- clipboard
-vim.keymap.set("v", "<leader>y", '"+y', { desc = "Copy" })
-vim.keymap.set("n", "<leader>Y", '"+y$', { desc = "Copy to end of line" })
-vim.keymap.set("n", "Y", "y$", { desc = "Yank to end of line" })
+vim.keymap.set("n", "Y", "y$", { desc = "Copy to end of line" })
 
 -- buffer
 vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
