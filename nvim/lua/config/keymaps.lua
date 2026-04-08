@@ -13,6 +13,7 @@ vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
 
 -- clipboard
 vim.keymap.set("n", "Y", "y$", { desc = "Copy to end of line" })
+vim.keymap.set("v", "p", '"_dP', { desc = "Paste without yanking selection" })
 
 -- buffer
 vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
