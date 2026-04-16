@@ -15,7 +15,7 @@ require("bufferline").setup({
 					end
 
 					local filters = explorer.filters.state
-					local indicators = { "Explorer " }
+					local indicators = {}
 
 					-- filter off = files are visible, show indicator
 					if not filters.dotfiles then
@@ -25,7 +25,10 @@ require("bufferline").setup({
 						table.insert(indicators, "i")
 					end
 
-					return table.concat(indicators, " ")
+					if #indicators > 0 then
+						return "Explorer [" .. table.concat(indicators) .. "]"
+					end
+					return "Explorer"
 				end,
 				text_align = "center",
 				separator = false,
