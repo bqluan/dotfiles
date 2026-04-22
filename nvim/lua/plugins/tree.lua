@@ -12,6 +12,9 @@ require("nvim-tree").setup({
 			return "󰙅 " .. vim.fn.fnamemodify(path, ":t")
 		end,
 		special_files = {},
+		icons = {
+			git_placement = "after",
+		},
 	},
 	filters = {
 		git_ignored = true,
