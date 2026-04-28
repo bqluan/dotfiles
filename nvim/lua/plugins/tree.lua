@@ -4,6 +4,11 @@ vim.pack.add({
 })
 
 require("nvim-tree").setup({
+	on_attach = function(bufnr)
+		require("nvim-tree.api").config.mappings.default_on_attach(bufnr)
+		-- let flash handle 's' (see keymaps.lua)
+		vim.keymap.del("n", "s", { buffer = bufnr })
+	end,
 	view = {
 		width = 35,
 	},
