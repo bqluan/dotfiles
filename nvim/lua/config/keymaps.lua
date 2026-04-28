@@ -61,14 +61,6 @@ end, { desc = "Flash" })
 vim.keymap.set({ "n", "x", "o" }, "S", function()
 	require("flash").treesitter()
 end, { desc = "Flash treesitter" })
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "NvimTree",
-	callback = function(args)
-		vim.keymap.set("n", "s", function()
-			require("flash").jump()
-		end, { buffer = args.buf, desc = "Flash" })
-	end,
-})
 
 -- window navigation
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to left window" })

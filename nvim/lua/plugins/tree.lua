@@ -5,9 +5,19 @@ vim.pack.add({
 
 require("nvim-tree").setup({
 	on_attach = function(bufnr)
-		require("nvim-tree.api").config.mappings.default_on_attach(bufnr)
-		-- let flash handle 's' (see keymaps.lua)
-		vim.keymap.del("n", "s", { buffer = bufnr })
+		local api = require("nvim-tree.api")
+		api.config.mappings.default_on_attach(bufnr)
+		-- let flash handle 's'
+		vim.keymap.set("n", "s", function()
+			require("flash").jump()
+		end, { buffer = bufnr, desc = "Flash" })
+		-- open with system default app
+		vim.keymap.set("n", "O", function()
+			local node = api.tree.get_node_under_cursor()
+			if node then
+				vim.ui.open(node.absolute_path)
+			end
+		end, { buffer = bufnr, desc = "System Open" })
 	end,
 	view = {
 		width = 35,
