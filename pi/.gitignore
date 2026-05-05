@@ -1,0 +1,3 @@
+# Sensitive credentials and session data
+agent/auth.json
+agent/sessions/
