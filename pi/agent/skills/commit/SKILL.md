@@ -19,10 +19,11 @@ and create the commit.
 
 **Steps:**
 
-1. Check git remote info and current status (including diff and recent commit history)
+1. Run `git fetch` to update remote tracking info
+2. Check current branch tracking info and status (including diff and recent commit history)
    - If branch is behind remote: STOP and warn user to handle manually (pull/rebase first)
    - For untracked directories, check both files and symlinks
-2. Stage relevant files
-3. Generate commit message using the format specified above
-4. Commit
-5. Ask user if they want to push, and push if so
+3. Stage relevant files
+4. Generate commit message using the format specified above
+5. Commit
+6. Ask user if they want to push, and push if so
