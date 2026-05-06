@@ -5,7 +5,8 @@ description: Generate a conventional commit message and create the commit
 
 # Commit Workflow
 
-Generate a commit message following [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#specification) and create the commit.
+Generate a commit message following [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#specification)
+and create the commit.
 
 **Commit Message:**
 
