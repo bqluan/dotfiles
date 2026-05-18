@@ -33,6 +33,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set("n", "gd", vim.lsp.buf.definition, vim.tbl_extend("force", opts, { desc = "Goto definition" }))
 		vim.keymap.set("n", "gr", vim.lsp.buf.references, vim.tbl_extend("force", opts, { desc = "References" }))
 		vim.keymap.set("n", "K", vim.lsp.buf.hover, vim.tbl_extend("force", opts, { desc = "Hover" }))
+		vim.keymap.set(
+			"n",
+			"<leader>cd",
+			vim.diagnostic.open_float,
+			vim.tbl_extend("force", opts, { desc = "Line diagnostics" })
+		)
 		vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, vim.tbl_extend("force", opts, { desc = "Rename" }))
 		vim.keymap.set(
 			"n",

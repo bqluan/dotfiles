@@ -7,6 +7,7 @@ vim.g.mapleader = " "
 
 -- tab display width
 vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 
 -- global statusline (one bar at the bottom, not per-window)
 vim.opt.laststatus = 3
