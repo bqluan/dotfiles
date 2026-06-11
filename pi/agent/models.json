@@ -3,7 +3,7 @@
     "deepseek": {
       "baseUrl": "https://api.deepseek.com",
       "api": "openai-completions",
-      "apiKey": "DEEPSEEK_API_KEY",
+      "apiKey": "$DEEPSEEK_API_KEY",
       "models": [
         {
           "id": "deepseek-v4-pro",
@@ -58,7 +58,7 @@
     "zai": {
       "baseUrl": "https://open.bigmodel.cn/api/coding/paas/v4",
       "api": "openai-completions",
-      "apiKey": "ZAI_API_KEY",
+      "apiKey": "$ZAI_API_KEY",
       "models": [
         {
           "id": "glm-5.1",
