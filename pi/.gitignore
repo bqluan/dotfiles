@@ -1,3 +1,4 @@
 # Sensitive credentials and session data
 agent/auth.json
 agent/sessions/
+agent/trust.json
