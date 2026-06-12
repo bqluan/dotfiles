@@ -1,8 +1,8 @@
 ---
 name: prefer-rg
-description: The system has rg installed. Always use rg instead of grep for code search.
+description: The system has rg installed. Prefer rg over grep for code search.
 ---
 
-# Prefer ripgrep
+# Prefer rg
 
-Always use `rg` instead of `grep` for code search.
+`rg` is installed. Choose the right tool for the task (`rg` or `grep`) based on their respective strengths.
