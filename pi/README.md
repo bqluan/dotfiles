@@ -10,3 +10,7 @@ Run this command to link it:
 ```bash
 ln -sf "$(pwd)" ~/.pi
 ```
+
+## Prerequisites
+
+- [ripgrep](https://github.com/BurntSushi/ripgrep) (`rg`) — required by the `prefer-rg` skill
