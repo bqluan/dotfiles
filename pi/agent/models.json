@@ -64,23 +64,24 @@
           "id": "glm-5.2",
           "name": "GLM 5.2",
           "contextWindow": 1000000,
-          "maxTokens": 128000,
+          "maxTokens": 131072,
           "reasoning": true,
           "thinkingLevelMap": {
             "minimal": null,
             "low": null,
             "medium": null,
             "high": "high",
-            "xhigh": null
+            "xhigh": "max"
           },
           "cost": {
-            "input": 6,
-            "output": 24,
-            "cacheRead": 1.3,
+            "input": 8,
+            "output": 28,
+            "cacheRead": 2,
             "cacheWrite": 0
           },
           "compat": {
             "supportsDeveloperRole": false,
+            "supportsReasoningEffort": true,
             "thinkingFormat": "zai",
             "zaiToolStream": true
           }
@@ -89,7 +90,7 @@
           "id": "glm-5.1",
           "name": "GLM 5.1",
           "contextWindow": 200000,
-          "maxTokens": 128000,
+          "maxTokens": 131072,
           "reasoning": true,
           "thinkingLevelMap": {
             "minimal": null,
@@ -106,6 +107,7 @@
           },
           "compat": {
             "supportsDeveloperRole": false,
+            "supportsReasoningEffort": false,
             "thinkingFormat": "zai",
             "zaiToolStream": true
           }
