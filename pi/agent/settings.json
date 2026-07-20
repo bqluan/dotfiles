@@ -1,7 +1,6 @@
 {
   "editorPaddingX": 1,
   "hideThinkingBlock": true,
-  "lastChangelogVersion": "0.80.3",
-  "theme": "catppuccin-sage",
-  "defaultThinkingLevel": "high"
+  "lastChangelogVersion": "0.80.10",
+  "theme": "catppuccin-sage"
 }

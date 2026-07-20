@@ -2,3 +2,6 @@
 agent/auth.json
 agent/sessions/
 agent/trust.json
+
+# Regenerated caches
+agent/models-store.json
