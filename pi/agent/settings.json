@@ -1,6 +1,9 @@
 {
   "editorPaddingX": 1,
   "hideThinkingBlock": true,
-  "lastChangelogVersion": "0.80.10",
-  "theme": "catppuccin-sage"
+  "lastChangelogVersion": "0.81.1",
+  "theme": "catppuccin-sage",
+  "defaultProvider": "qwen-token-plan-cn",
+  "defaultModel": "glm-5.2",
+  "defaultThinkingLevel": "medium"
 }
