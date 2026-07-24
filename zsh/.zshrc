@@ -41,3 +41,7 @@ alias v="nvim"
 alias z="zellij"
 alias za="zellij attach"
 alias zl="zellij ls"
+
+# Coding agents - pi
+alias ds="pi --model deepseek/deepseek-v4-pro --thinking high"
+alias gpt="pi --model openai/gpt-5.6-terra --thinking medium"
