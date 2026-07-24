@@ -2,8 +2,6 @@
   "editorPaddingX": 1,
   "hideThinkingBlock": true,
   "lastChangelogVersion": "0.82.0",
-  "theme": "catppuccin-sage",
-  "defaultProvider": "deepseek",
-  "defaultModel": "deepseek-v4-flash",
-  "defaultThinkingLevel": "high"
+  "theme": "catppuccin-sage"
 }
+
