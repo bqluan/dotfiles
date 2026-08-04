@@ -5,7 +5,7 @@ keybinds clear-defaults=true {
         bind "Super t" { NewTab; }
         bind "Super p" { NewPane; }
         bind "Super d" { NewPane "Down"; }
-        bind "Super w" { ToggleFloatingPanes; }
+        bind "Super f" { ToggleFloatingPanes; }
         bind "Super 1" { GoToTab 1; }
         bind "Super 2" { GoToTab 2; }
         bind "Super 3" { GoToTab 3; }
@@ -84,10 +84,10 @@ keybinds clear-defaults=true {
         bind "n" { NewPane; SwitchToMode "Locked"; }
         bind "d" { NewPane "Down"; SwitchToMode "Locked"; }
         bind "s" { NewPane "stacked"; SwitchToMode "Locked"; }
-        bind "w" { ToggleFloatingPanes; SwitchToMode "Locked"; }
+        bind "f" { ToggleFloatingPanes; SwitchToMode "Locked"; }
         bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "Locked"; }
         bind "i" { TogglePanePinned; SwitchToMode "Locked"; }
-        bind "f" { TogglePaneFrames; }
+        bind "F" { TogglePaneFrames; }
         bind "Esc" { SwitchToMode "Locked"; }
     }
     renamepane {
