@@ -6,6 +6,7 @@ keybinds clear-defaults=true {
         bind "Super p" { NewPane; }
         bind "Super d" { NewPane "Down"; }
         bind "Super f" { ToggleFloatingPanes; }
+        bind "Super w" { CloseFocus; }
         bind "Super 1" { GoToTab 1; }
         bind "Super 2" { GoToTab 2; }
         bind "Super 3" { GoToTab 3; }
