@@ -27,10 +27,11 @@ keybinds clear-defaults=true {
         bind "Super Enter" { ToggleFocusFullscreen; }
     }
     normal {
-        bind "s" { SwitchToMode "Session"; }
+        bind "o" { SwitchToMode "Session"; }
         bind "t" { SwitchToMode "Tab"; }
         bind "p" { SwitchToMode "Pane"; }
         bind "z" { SwitchToMode "Resize"; }
+        bind "s" { SwitchToMode "Scroll"; }
         bind "Esc" { SwitchToMode "Locked"; }
     }
     session {
@@ -106,6 +107,14 @@ keybinds clear-defaults=true {
         bind "L" { Resize "Decrease Right"; }
         bind "=" "+" { Resize "Increase"; }
         bind "-" { Resize "Decrease"; }
+        bind "Esc" { SwitchToMode "Locked"; }
+    }
+    scroll {
+        bind "j" "Down" { ScrollDown; }
+        bind "k" "Up" { ScrollUp; }
+        bind "G" { ScrollToBottom; }
+        bind "d" { HalfPageScrollDown; }
+        bind "u" { HalfPageScrollUp; }
         bind "Esc" { SwitchToMode "Locked"; }
     }
     shared_except "locked" {
