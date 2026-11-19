@@ -1,7 +1,7 @@
 {
   "providers": {
     "openai": {
-      "baseUrl": "https://gpt.eacase.de5.net/v1"
+      "baseUrl": "https://api.galaxydata.pro/v1"
     }
   }
 }

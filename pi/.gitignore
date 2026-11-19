@@ -1,7 +1,16 @@
-# Sensitive credentials and session data
-agent/auth.json
-agent/sessions/
-agent/trust.json
+# Whitelist mode: ignore everything by default, then allow only tracked
+# config back in. Runtime files pi keeps under agent/ (sessions, caches,
+# crash logs, managed install, bin shim, node data, ...) stay out of the
+# repo automatically — no per-file ignore list to maintain.
+/*
+!/.gitignore
+!/README.md
+!/agent/
 
-# Regenerated caches
-agent/models-store.json
+agent/*
+!agent/AGENTS.md
+!agent/models.json
+!agent/settings.json
+!agent/extensions/
+!agent/skills/
+!agent/themes/
