@@ -45,4 +45,4 @@ alias zl="zellij ls"
 # Coding agents - pi
 alias ds="pi --model deepseek/deepseek-flash --thinking high"
 alias glm="pi --model zai-coding-cn/glm-5.3-flash --thinking high"
-alias gpt="pi --model openai/gpt-6-sol --thinking medium"
+alias gpt="pi --model openai/gpt-6.2-sol --thinking medium"
