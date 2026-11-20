@@ -2,6 +2,8 @@ vim.pack.add({
 	{ src = "https://github.com/akinsho/bufferline.nvim", name = "bufferline" },
 })
 
+-- Load Catppuccin before Bufferline reads its highlights, regardless of plugin
+-- load order.
 require("plugins.colorscheme")
 
 require("bufferline").setup({
@@ -21,7 +23,7 @@ require("bufferline").setup({
 					local filters = explorer.filters.state
 					local indicators = {}
 
-					-- filter off = files are visible, show indicator
+					-- Mark disabled filters to show which files are visible.
 					if not filters.dotfiles then
 						table.insert(indicators, "h")
 					end
