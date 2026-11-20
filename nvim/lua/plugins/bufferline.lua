@@ -2,9 +2,13 @@ vim.pack.add({
 	{ src = "https://github.com/akinsho/bufferline.nvim", name = "bufferline" },
 })
 
+require("plugins.colorscheme")
+
 require("bufferline").setup({
+	highlights = require("catppuccin.special.bufferline").get_theme(),
 	options = {
-		-- leave space for nvim-tree so the tabline only spans the right side
+		indicator = { style = "none" },
+		-- Leave space for nvim-tree so the tabline only spans the right side.
 		offsets = {
 			{
 				filetype = "NvimTree",
