@@ -1,6 +1,6 @@
 {
 	"$schema": "https://pi.dev/schemas/theme.schema.json",
-	"name": "blue-hour",
+	"name": "afterglow",
 	"appearance": "dark",
 	"vars": {
 		"muted": "okhsl(229 6% 67%)",
@@ -13,7 +13,7 @@
 		"green": "okhsl(159 36% 67%)",
 		"red": "okhsl(20 72% 72%)",
 		"yellow": "okhsl(83 55% 70%)",
-		"userBg": "#232238",
+		"userBg": "#1d1d2a",
 		"selectionBg": "okhsl(265 28% 34%)",
 		"errorBg": "#492b37"
 	},

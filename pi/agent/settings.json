@@ -1,7 +1,7 @@
 {
-  "editorPaddingX": 1,
-  "theme": "blue-hour",
-  "showHardwareCursor": true,
+  "theme": "afterglow",
   "hideThinkingBlock": true,
+  "editorPaddingX": 1,
+  "showHardwareCursor": true,
   "lastChangelogVersion": "1.5.2"
 }
