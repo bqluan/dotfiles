@@ -1,10 +1,8 @@
 # Zellij
 
-To use this configuration, create a symlink from Zellij's config directory
-to this directory.
+To use this configuration, create a symlink from Zellij's config directory to this directory.
 
-By default, [Zellij](https://zellij.dev/) looks for its configuration
-in `~/.config/zellij`.
+By default, [Zellij](https://zellij.dev/) looks for its configuration in `~/.config/zellij`.
 
 Run this command to link it:
 

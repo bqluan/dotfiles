@@ -1,10 +1,8 @@
 # tmux
 
-To use this configuration, create a symlink from tmux's config file
-to the `.tmux.conf` file in this directory.
+To use this configuration, create a symlink from tmux's config file to the `.tmux.conf` file in this directory.
 
-By default, [tmux](https://github.com/tmux/tmux) looks for its configuration
-in `~/.tmux.conf`.
+By default, [tmux](https://github.com/tmux/tmux) looks for its configuration in `~/.tmux.conf`.
 
 Run this command to link it:
 

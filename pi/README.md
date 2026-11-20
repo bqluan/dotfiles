@@ -1,7 +1,6 @@
 # Pi
 
-To use this configuration, create a symlink from Pi's config directory
-to this directory.
+To use this configuration, create a symlink from Pi's config directory to this directory.
 
 By default, [Pi](https://pi.dev) looks for its configuration in `~/.pi`.
 
